@@ -1,0 +1,46 @@
+/* Footer -------------------- */
+
+footer {
+  background-color: $light-grey;
+	@extend %flex-align;
+	@extend %flex;
+	@extend %flex-center;
+	padding: 1em;
+  @include breakpoint(medium){
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+  }
+}
+
+.social {
+  @extend %flex;
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+
+  li {
+    width: 3em;
+    text-align: center;  
+  }
+
+  a {
+      padding: .5em;
+      color: $charcoal;
+      &:hover{
+        color: $rose-gold;
+      } 
+  }
+
+  svg {
+    width: 1.7em;
+    height: 1.7em;
+  }
+}
+
+p.copyright {
+  margin: 0;
+  display: none;
+  @include breakpoint(medium){
+    display: block;
+  }
+}

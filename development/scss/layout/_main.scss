@@ -1,0 +1,263 @@
+/* General Layout */
+
+.about-container, .about-text-container, footer, .image-container, .intro, .project, .section-one, .section-three, .section-four .social, .wrapper {
+	@extend %flex;
+  	@extend %flex-center;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	@include breakpoint(large){
+    	width: 90%;
+    }
+}
+
+.flex-row {
+	@extend %flex;
+	@extend %flex-row;
+}
+
+footer, .image-container, .social {
+  	@extend %flex-row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.about-text-container, .project, .section-three, .wrapper {
+	@extend %flex-column;
+}
+
+/***** Section One *****/
+
+.intro {
+	@extend %flex-column;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	width: 90%;
+
+	@include breakpoint(medium){
+    	flex-direction: row;
+    	-webkit-flex-direction: row;  
+  	}
+
+  	@include breakpoint(large){
+    	max-width: 1050px;
+  	}
+}
+
+.intro-image-container, .intro-text {
+	margin: 1em;
+	@extend %align-self;
+}
+
+.intro-image-container {
+	width: 55%;
+	@include breakpoint(medium){
+    	width: 30%;
+  	}
+  	@include breakpoint(large){
+    	width: 300px;
+  	}
+}
+
+.intro-text {
+	width: 80%;
+	@include breakpoint(medium){
+    	width: 50%;
+  	}
+}
+
+.intro-image-container, .about-image {
+	outline: .3em solid $white;
+	@extend %transition;
+	&:hover {
+	-webkit-filter: grayscale(100%);
+  	filter: grayscale(100%);
+  	filter: gray;
+	}
+}
+
+.section-one {
+	height: calc(100vh - 66.19px);
+	@extend %flex-align;
+	background-color: $light-grey;
+}
+
+.section-one strong {
+	font-style: italic;
+}
+
+/***** Section Two *****/
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.project {
+	@extend %flex-grow;
+	flex-wrap: wrap;
+	flex: 0 1 80%;
+	-webkit-flex: 0 1 80%;
+	margin: 5% 0;
+	padding-top: 2em;
+	border-top: 3px solid $charcoal;
+
+	@include breakpoint(medium){
+    	margin: 5%;
+    	-webkit-flex: 0 1 300px;
+    	flex: 0 1 300px;
+    }
+    @include breakpoint(large){
+    	-webkit-flex: 0 1 360px;
+    	flex: 0 1 360px;
+    }
+}
+
+.project-header {
+	background-color: $charcoal;
+	@extend %flex;
+	@extend %flex-align;
+	@extend %flex-center;
+	@extend %transition;
+ 	margin: auto;
+ 	position: absolute;
+ 	top: 0; 
+ 	left: 0; 
+ 	bottom: 0; 
+ 	opacity: 0;
+ 	right: 0;
+ 	text-align: center;	
+}
+
+.section-two, .section-three, .section-four {
+	padding: 3.5em 0;
+}
+
+.thumbnail, .project-details {
+	flex: 1;
+	-webkit-flex: 1;
+}
+
+.thumbnail {
+	position: relative;
+	margin-bottom: 2em;
+
+	&:hover {
+		.project-header {
+			opacity: .95;
+		}
+	}
+
+}
+
+/***** Section Three *****/
+
+.section-three {
+	background-color: $rose-gold;
+	flex: 1;
+	-webkit-flex: 1;
+}
+
+.skills-container {
+	@extend %flex-column;
+	padding-bottom: 2em;
+
+	@include breakpoint(medium){
+    	flex-direction: row;
+  		-webkit-flex-direction: row;  
+    }
+
+    @include breakpoint(large){
+    	margin: 0 auto;
+    	max-width: 1200px;
+    	width: 95%;
+  	}
+
+}
+
+.skills-container, .skills-left, .skills-right {
+	@extend %flex;
+}
+
+.skills-left, .skills-right {
+	
+	@extend %flex-column;
+	@extend %flex-align;
+	flex: 1;
+	height: 320px;
+	-webkit-flex: 1;
+	height: 100%;
+	margin: 1em 2em;
+	outline: 1px solid $charcoal;
+	padding: 1em;
+	text-align: center;
+	@include breakpoint(medium){
+  		margin: 1em;
+    }
+	ul {
+		@extend %flex;
+		@extend %flex-column;
+		@extend %flex-space-around;
+		flex: 1;
+		-webkit-flex: 1;
+		margin: 0;
+		padding: 0;
+		-webkit-padding-start: 0;
+		width: 100%;
+
+	}
+	li {
+		list-style: none;
+		padding: .5em;
+	}
+}
+
+/***** Section Four *****/
+
+.section-four {
+	background-color: $light-grey;
+	@extend %flex-column;
+	@include breakpoint(medium){
+  		flex-direction: row;
+    	-webkit-flex-direction: row; 
+    }
+
+    .about-container {
+    	@extend %flex-column;
+    	@extend %flex-align;
+		@include breakpoint(medium){
+	  		flex-direction: row;
+	    	-webkit-flex-direction: row; 
+	    }
+    }
+
+    .about-image-container {
+		width: 60%;
+		height: auto;
+		@include breakpoint(medium){
+	    	width: 30%;
+	  	}
+	  	img {
+	  		width: 100%;
+	  	}
+	}
+
+	.about-text-container {
+		width: 80%;
+		@include breakpoint(medium){
+	    	width: 40%
+	  	}
+	}
+
+	.about-image {
+		outline: .3em solid $rose-gold;
+	}
+
+	.about-image-container, .about-text-container {
+		margin: 1.5em;
+		@extend %align-self;
+	}
+
+}

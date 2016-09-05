@@ -1,0 +1,170 @@
+/* Typography -------------------- */
+
+
+/* Font Styles */
+h1, a, h2, h3, p {
+  font-family: $stack-sans-serif;
+  color: $charcoal;
+}
+
+h1 {
+  font-size: $large-header-font;
+  font-weight: 400;
+  margin: 0 .4em;
+}
+
+h2 {
+  font-size: $large-font;
+  font-weight: 300;
+  margin: 1em auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2, .project-details, .section-one p, .section-four .about-text-container p {
+  font-family: $stack-serif;
+}
+
+h3 {
+  border-bottom: 3px solid $white;
+  margin: .5em 0 .8em;
+  text-transform: uppercase;
+}
+
+.intro-text strong {
+  color: $rose-gold;
+}
+
+.main-header {
+
+  h1 p, nav li a, svg {
+    @extend %transition;
+    &:hover, &:active {
+      color: $rose-gold;
+    }
+  }
+
+  nav ul {
+    text-align: center;
+  }
+
+  li a {
+    font-size: .8em;
+    text-transform: uppercase;
+  }
+
+}
+
+.nav-active {
+  color: $rose-gold;
+}
+
+p {
+  margin: 0 auto;
+}
+
+.project-details {
+  text-align: center;
+  line-height: 1.3em;
+}
+
+.project-header  {
+  a {
+    text-decoration: none;
+    outline: none;
+  }
+  
+}
+
+.project-header p, .popup-button p, .section-four a {
+    background-color: $rose-gold;
+    color: $black;
+    @extend %transition;
+    font-weight: 400;
+    padding: 1em;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $white;
+    }
+}
+
+.section-one p {
+  color: $charcoal;
+  text-align: center;
+  line-height: $medium-font;
+  font-size: $medium-font;
+    @include breakpoint(medium){
+      line-height: $large-font;
+      font-size: $large-font;
+    }
+}
+
+.section-four {
+  p {
+    text-align: center;
+  }
+
+  a {
+    margin: 1.5em auto;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $rose-gold;
+      color: $white;
+    }
+  }
+
+  .about-text-container p {
+    line-height: $medium-font;
+    font-size: $medium-font;
+    
+    @include breakpoint(medium){
+      font-size: 1.6em;
+      line-height: 1.5em;
+    }
+  }
+}
+
+.skills-container {
+  li {
+    font-family: $stack-serif;
+  }
+}
+
+.white-popup {
+
+  a {
+    text-decoration: none;
+  }
+
+  h3 {
+    margin: 1.5em auto 1em;
+  }
+
+  h3, .popup-button p {
+    width: 40%;
+    font-size: .9em;
+    @include breakpoint(medium){
+      font-size: inherit;
+    }
+  }
+
+  .popup-button p {
+    margin: 1.5em auto 0;
+  }
+
+  .popup-button p:hover {
+    background-color: $rose-gold;
+    color: $white;
+  }
+
+  .popup-text {
+    font-family: $stack-serif;
+    font-size: .8em;
+    @include breakpoint(medium){
+      font-size: inherit;
+    }
+  }
+
+}

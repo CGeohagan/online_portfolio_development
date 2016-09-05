@@ -1,0 +1,108 @@
+/* Header -------------------- */
+
+
+#exit {
+	color: $rose-gold;
+	display: none;
+	padding: 1em;
+	position: fixed;
+	right: 5px;
+	top: 5px;
+	z-index: 1000;
+	svg {
+  		width: 25px;
+		height: 25px;
+  	}
+}
+
+h1 , nav {
+	a {
+		text-decoration: none;
+	}
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.main-header {
+	background-color: $white;
+	@extend %flex;
+  	@extend %flex-space;
+  	@extend %flex-align;
+  	height: $header-height;
+  	padding: 0 .5em;
+  	position: relative;
+  	width: 100%;
+  	z-index: 1000;
+
+  	@include breakpoint(medium){
+    	padding: 0 1em;
+  	}
+
+}
+
+.main-header nav li {
+	@extend %transition;
+	list-style: none;
+	padding: 1em;
+	width: 100%;
+}
+
+.main-header nav ul, .main-header nav:active ul {	
+	background-color: $white;
+	display: block;
+	height: 100%;
+	left: 0;
+    margin: 0;
+	padding: 10% 0 0 0;
+	position: fixed;
+	opacity: .9;
+    top: 0;
+    width: 100%;
+    
+	@include breakpoint(medium){
+		background-color: $white;
+		display: flex;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+    	flex-direction: row;
+  		-webkit-flex-direction: row;  
+  		height: auto;
+  		left: auto;
+  		padding: 0;
+  		position: relative;
+  		top: auto;
+  		width: 420px;	
+  	}
+	
+}
+
+#menu-icon {
+	display: inline-block;
+	color: $charcoal;
+	@extend %transition;
+	position: absolute;
+    top: 1.3em;
+    right: 1.5em;
+
+	@include breakpoint(medium){
+    	display: none;
+  	}
+  	svg {
+  		width: 35px;
+		height: 35px;
+  	}
+  	&:hover, &:active {
+  		color: $rose-gold;
+  	}
+}
+
+.stick {
+	position: fixed;
+	top: 0;
+}
+
+.visible {
+	visibility: visible;
+}

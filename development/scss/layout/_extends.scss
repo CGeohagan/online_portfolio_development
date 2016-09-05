@@ -1,0 +1,63 @@
+/* Extends -------------------- */
+
+%flex {
+  display: flex;
+  display:-webkit-flex;
+  display: -ms-flexbox;
+}
+
+%flex-column {
+  flex-direction: column;
+  -webkit-flex-direction: column; 
+}
+
+%flex-row {
+  flex-direction: row;
+  -webkit-flex-direction: row;  
+}
+
+%flex-center {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
+%flex-space {
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+
+%flex-space-around {
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+}
+
+%flex-grow {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+}
+
+%flex-end {
+  -ms-justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+%flex-align {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+%align-self {
+  -webkit-align-self: center; /* Safari 7.0+ */
+  align-self: center;
+}
+
+%transition {
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}

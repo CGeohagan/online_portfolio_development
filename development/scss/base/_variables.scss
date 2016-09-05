@@ -1,0 +1,40 @@
+/* Variables -------------------- */
+
+// Descriptive color variables
+
+$white          : #fff;
+$black          : #000;
+$navy-blue      : #2572AA;
+$dark-grey      : #4a4a4a;
+$light-grey     : #f4f4f4;
+$lighter-grey   : #f1f1f1;
+$light-pink     : #f6f6f2;
+$charcoal       : #313131;
+$cobalt         : #4254a7;
+$periwinkle     : #7f8cb4;
+$rose-gold      : #e7c5ac;
+$dark-blue      : #1c5c6e;
+$copper         : #a5774c;
+
+// Functional color variables
+
+$color-prim         : $light-grey;
+$color-sec          : $dark-grey;
+$color-link         : $navy-blue;
+$color-body         : $white;
+
+// Font 
+
+$body-font          : 16px;
+$medium-font        : 1.4em;
+$large-font         : 1.8em;
+$large-header-font  : 1.5em;
+$medium-header-font : 1.4em;
+$main-nav-font      : .85em;
+$portfolio-font     : .95em;
+
+// Other variables
+$header-height      : 68px;
+
+$stack-sans-serif : 'Montserrat', 'Open Sans', sans-serif;
+$stack-serif : 'Lora', serif;
