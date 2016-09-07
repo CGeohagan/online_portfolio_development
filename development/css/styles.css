@@ -119,7 +119,7 @@ h1 a, nav a {
   display: inline-block;
   color: #313131;
   position: absolute;
-  top: 1.3em;
+  top: 1.1em;
   right: 1.5em; }
   @media (min-width: 768px) {
     #menu-icon {

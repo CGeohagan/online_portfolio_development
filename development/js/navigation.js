@@ -17,7 +17,11 @@ $(document).ready(function(){
 		var div_top = $('#nav-anchor').offset().top;
 			if (window_top > div_top) {
 				$('.main-header').addClass('stick');
-				$('#logo').html('<p>COLLEEN GEOHAGAN</p>');
+				if (window.matchMedia('(max-width: 768px)').matches) {
+					$('#logo').html('<p>CG</p>');
+				} else {
+					$('#logo').html('<p>COLLEEN GEOHAGAN</p>');
+				}
 			} else {
 				$('.main-header').removeClass('stick');
 				$('#logo').html('<p>CG</p>');
